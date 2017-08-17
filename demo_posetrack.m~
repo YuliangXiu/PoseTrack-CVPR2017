@@ -7,7 +7,7 @@
 start_index = 1;
 
 % Number of videos to process starting from the index 'start_index'
-num_videos = 5;
+num_videos = 10;
 
 % extract heatmaps for the video
 pt_cache_cnn_features(3, 'test', start_index, num_videos, false);
@@ -17,5 +17,5 @@ pt_cache_deepmatching_features(3, 'test', start_index, num_videos);
 
 % pose tracking
 pt_pose_tracking(3,start_index, num_videos, false, true);
-
+g
 %pt_eval_pose_tracking(3);

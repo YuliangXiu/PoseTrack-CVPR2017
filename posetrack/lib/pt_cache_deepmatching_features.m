@@ -77,7 +77,7 @@ for vid_idx = firstidx:lastidx
             sf = 2;
         end
                 
-        cmd = sprintf('%s %s %s -nt 0 -downscale %d > %s', deepmatching, fr_fn1, fr_fn2, sf, save_file_name);
+        cmd = sprintf('%s %s %s -nt 20 -downscale %d > %s', deepmatching, fr_fn1, fr_fn2, sf, save_file_name);
               
         s = unix(cmd);
         time_elasped = toc(time_start);
