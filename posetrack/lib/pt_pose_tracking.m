@@ -368,6 +368,7 @@ for vIdx = firstidx:lastidx
 
         tic
         setenv('LD_LIBRARY_PATH', '');
+        
         s = unix([pre_cmd '; ' cmd]);
         toc
         if (s > 0)

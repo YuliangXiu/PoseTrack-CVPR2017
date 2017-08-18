@@ -1,0 +1,4 @@
+/home/yuliang/code/PoseTrack-CVPR2017/posetrack/solver/CMakeFiles/test.dir
+/home/yuliang/code/PoseTrack-CVPR2017/posetrack/solver/CMakeFiles/edit_cache.dir
+/home/yuliang/code/PoseTrack-CVPR2017/posetrack/solver/CMakeFiles/rebuild_cache.dir
+/home/yuliang/code/PoseTrack-CVPR2017/posetrack/solver/CMakeFiles/pt-solver-callback.dir

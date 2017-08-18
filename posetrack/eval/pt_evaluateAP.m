@@ -21,7 +21,7 @@ tableTex = cell(length(expidxs)+1,1);
 % load ground truth
 p = pt_exp_params(1);
 gtAnnolist = load(p.testGT,'annolist');
-gtAnnolist = gtAnnolist.annolist;
+gtAnnolist = gtAnnolist.annolist(1:5);
 parts = get_parts();
 pidxs = p.pidxs;
 gtAnnolistMPII = pt_convert_to_mpii_format(gtAnnolist);

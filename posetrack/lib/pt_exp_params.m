@@ -2,12 +2,12 @@ function p = pt_exp_params(expidx)
 
 p = [];
 p.code_dir = pwd();
-p.expDir = [p.code_dir '/data/'];
+p.expDir = [p.code_dir '/data'];
 p.vidDir = [p.code_dir '/data/videos/'];
 p.latexDir = [p.code_dir '/output/latex/'];
 p.plotsDir = [p.code_dir '/output/plots/'];
 p.ptSolver  = [p.code_dir '/posetrack/solver/pt-solver-callback'];
-p.gurobi_license_file = ['/home/yuliang/Downloads/gurobi605/linux64/gurobi.lic;'];
+p.gurobi_license_file = '/home/yuliang/Downloads/gurobi605/linux64/gurobi.lic';
 
 p.deepMatching = [p.code_dir '/external/deepmatching/deepmatching'];
 p.pairwise_relations = [p.code_dir '/deepcut/data/pairwise/all_pairs_stats_all.mat'];

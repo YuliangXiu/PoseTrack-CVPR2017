@@ -8,7 +8,7 @@ end
 
 p = pt_exp_params(expidx);
 load(p.testGT,'annolist');
-gtAnnolist = annolist;
+gtAnnolist = annolist(1:5);
 parts = get_parts();
 
 num_videos = length(gtAnnolist);

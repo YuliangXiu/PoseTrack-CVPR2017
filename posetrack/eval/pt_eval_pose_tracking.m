@@ -17,7 +17,7 @@ end
 expMetrics = cell(size(expidxs));
 p = pt_exp_params(1);
 gtAnnolist = load(p.testGT,'annolist');
-gtAnnolist = gtAnnolist.annolist;
+gtAnnolist = gtAnnolist.annolist(1:5);
 parts = get_parts();
 pidxs = p.pidxs;
 
