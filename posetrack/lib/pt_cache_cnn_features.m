@@ -19,8 +19,7 @@ else
 end
 
 num_videos = length(annolist);
-
-if (nargin < 4)
+f (nargin < 4)
     nVids = num_videos;
 elseif ischar(nVids)
     nVids = str2num(nVids);

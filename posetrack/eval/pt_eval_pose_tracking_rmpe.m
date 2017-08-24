@@ -31,7 +31,7 @@ for expidx = expidxs
     num_joints = length(pidxs);
 
 
-    annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'pred_annolist');
+    annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'rmpe_results');
     estAnnolist = load(annPath, 'annolist');
     estAnnolist = estAnnolist.annolist;
     
@@ -62,7 +62,7 @@ for expidx = expidxs
             gtInfoJ.isVis = squeeze(gtInfo.isVis(:,:,j));
             gtInfoJ.rd = squeeze(gtInfo.rd(:,:,j));
 
-            stateInfoJ.X = squeeze(stateInfo.X(:,:,j));%Rcll Prcn MT ML IDs FM MOTA MOTP
+            stateInfoJ.X = squeeze(stateInfo.X(:,:,j)); %Rcll Prcn MT ML IDs FM MOTA MOTP
             stateInfoJ.Y = squeeze(stateInfo.Y(:,:,j));
             stateInfoJ.isVis = squeeze(stateInfo.isVis(:,:,j));
             [m, info, ~] = pt_CLEAR_MOT_HUN(gtInfoJ, stateInfoJ, options);

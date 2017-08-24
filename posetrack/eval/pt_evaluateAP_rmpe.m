@@ -38,7 +38,7 @@ for i = 1:length(expidxs);
     
     num_joints = length(pidxs);
 
-    annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'pred_annolist');
+    annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'rmpe_results');
     estAnnolist = load(annPath, 'annolist');
     estAnnolist = estAnnolist.annolist;
     estAnnolistMPII = pt_convert_to_mpii_format(estAnnolist);
