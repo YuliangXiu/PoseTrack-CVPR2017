@@ -32,7 +32,6 @@ for imgidx = 1:length(annolist_gt)
     % body joint is visible in the image
     isVis = false(length(annolist_gt(imgidx).annorect),nJoints);
     
-    
     % iterate over predicted poses
     for ridxPred = 1:length(pred(imgidx).annorect)
         % predicted pose
