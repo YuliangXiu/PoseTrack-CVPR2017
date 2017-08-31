@@ -7,7 +7,6 @@ nimgs = 1;
 for vIdx = 1:num_videos
     num_frames = inAnnolist(vIdx).num_frames;
     num_persons = inAnnolist(vIdx).num_persons;
-    
     for fIdx=1:num_frames
        npersons = 1;
        for pIdx=1:num_persons
@@ -16,6 +15,7 @@ for vIdx = 1:num_videos
                 continue;
             else
                 if(isfield(ann, 'point'))
+%                 vIdx, fIdx, pIdx
                     annolist(nimgs).annorect(npersons).annopoints.point = ann.point;
                 end
                 
