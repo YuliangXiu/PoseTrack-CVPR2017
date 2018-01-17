@@ -7,7 +7,7 @@ if(nargin < 2)
 end
 
 p = pt_exp_params(expidx);
-load(p.testGT,'annolist');
+load(p.trainGT,'annolist');
 gtAnnolist = annolist;
 parts = get_parts();
 
@@ -71,8 +71,8 @@ end
 
 savePath = [p.ptResultsDir, 'exp', num2str(expidx)];
 mkdir_if_missing(savePath);
-fprintf('Saving annolist file at: %s\n', savePath);
-save([savePath,'/pred_annolist'], 'annolist');
+% fprintf('Saving annolist file at: %s\n', savePath);
+save([savePath,'/train_annolist'], 'annolist');
 
 end
 

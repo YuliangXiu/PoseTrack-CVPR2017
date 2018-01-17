@@ -46,6 +46,7 @@ end
 
 caffe.reset_all();
 caffe.set_mode_gpu();
+caffe.set_device(1);
 net = caffe.Net(net_def_file, net_bin_file, 'test');
 fprintf('testing from net file %s\n', net_bin_file);
 

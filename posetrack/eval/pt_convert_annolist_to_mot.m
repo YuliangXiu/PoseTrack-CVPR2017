@@ -15,7 +15,7 @@ end
 
 min_len = 1e10;
 for f = 1:num_frames
-    try
+%     try
     for p=1:num_persons
         % take the info about which predictions should be considered for
         % evaluation
@@ -27,7 +27,7 @@ for f = 1:num_frames
         [joints,visFlag] = pt_get_anno_joints_with_occ(annolist.annopoints{p,f}, pidxs, parts);
          for j=1:num_joints
             % if visible or set to zero due to occlusion flag
-            if(~isnan(visFlag(j)) && keepPredInfo(p, j))
+            if(visFlag(j) && keepPredInfo(p, j))
                 annInfo.X(f,p,j) = joints(j,1);
                 annInfo.Y(f,p,j) = joints(j,2);
                 annInfo.isVis(f,p,j) = 1;
@@ -45,9 +45,9 @@ for f = 1:num_frames
             end
         end
     end
-    catch
-        keyboard();
-    end
+%     catch
+%         keyboard();
+%     end
 end
 
 end

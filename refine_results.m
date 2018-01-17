@@ -1,4 +1,4 @@
-name = 'cmu_results.mat';
+name = 'rmpe_results_hung.mat';
 load(['/home/yuliang/code/PoseTrack-CVPR2017/data/bonn-multiperson-posetrack/results/exp3/',name]);
 for vid=1:30
     for pid=1:annolist(vid).num_persons
@@ -21,7 +21,9 @@ for vid=1:30
                         end
                     elseif (fid+2<=annolist(vid).num_frames)
                         annolist(vid).annopoints{pid,fid} = annolist(vid).annopoints{pid, fid+2};
-                        annolist(vid).annopoints{pid,fid+1} = annolist(vid).annopoints{pid, fid+2};
+                        annolist(vid).annopoints{pid,fid+1} = annolist(vid)% name = 'test_annolist.mat';
+% refine_name = 'test_annolist_refine.mat';
+.annopoints{pid, fid+2};
                         
                         for part_id=1:14
                             dis_x = annolist(vid).annopoints{pid, fid+2}.point(part_id).x - annolist(vid).annopoints{pid, fid-1}.point(part_id).x;

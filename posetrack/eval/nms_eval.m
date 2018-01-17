@@ -1,14 +1,14 @@
-function [apAll] = pt_evaluateAP(expidxs, p_noise, m_noise, thres)
+function [apAll] = nms_eval(expidxs, p_noise, m_noise, thres)
 % implementation of AP measure,
 % as defined in [Pishchulin et al., arXiv'15]
 
-if(nargin ==4)
+if(nargin <=4)
     options.td = 0.2;
     options.minTrackLen = 5;
     options.minAvgJoints = 3;
 end
 
-kalman_refine;
+%kalman_refine;
 partNames = {'right ankle','right knee','right hip','left hip','left knee','left ankle','right wrist','right elbow','right shoulder','left shoulder','left elbow','left wrist','neck','top head','avg full body'};
 colorIdxs = [1 1];
 
@@ -38,7 +38,9 @@ for i = 1:length(expidxs);
     
     num_joints = length(pidxs);
 
-    annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'rmpe_results_hung_noblank_newmsrcnn2_kalman');
+    annPath = fullfile(p.ptResultsDir, ['test'], 'output');
+
+    %annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'rmpe_results_hung_noblank_newmsrcnn2_kalman');
 % annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'rmpe_results_hung_noblank_newmsrcnn2');
 %     annPath = fullfile(p.ptResultsDir, ['exp', num2str(expidx)], 'test_annolist');
     estAnnolist = load(annPath, 'annolist');

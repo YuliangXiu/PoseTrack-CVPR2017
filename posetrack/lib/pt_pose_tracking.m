@@ -36,10 +36,10 @@ fprintf('nImgs: %d\n',nVideos);
 
 is_release_mode = get_release_mode();
 
-video_set = 'test';
+video_set = 'train';
 p = pt_exp_params(expidx);
 exp_dir = fullfile(p.expDir, p.shortName);
-load(p.testGT,'annolist');
+load(p.trainGT,'annolist');
 
 ptMulticutDir = p.ptMulticutDir;
 mkdir_if_missing(ptMulticutDir);
@@ -392,7 +392,7 @@ for vIdx = firstidx:lastidx
         save(predFname, 'people');
     end 
     % visualise predictions
-    pt_vis_people(expidx, vIdx);
+%     pt_vis_people(expidx, vIdx);
 end  
 
 fprintf('done\n');

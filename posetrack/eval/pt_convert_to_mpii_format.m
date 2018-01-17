@@ -14,10 +14,10 @@ for vIdx = 1:num_videos
             if(isempty(ann))
                 continue;
             else
-                if(isfield(ann, 'point'))
+%                 if(isfield(ann, 'point'))
 %                 vIdx, fIdx, pIdx
-                    annolist(nimgs).annorect(npersons).annopoints.point = ann.point;
-                end
+                annolist(nimgs).annorect(npersons).annopoints.point = ann.point;
+%                 end
                 
                 if(isfield(ann, 'head_rect'))
                     annolist(nimgs).annorect(npersons).x1 = ann.head_rect(1);
